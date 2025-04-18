@@ -7,6 +7,16 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@amsterdam/design-system-assets':
+        specifier: ^0.3.0
+        version: 0.3.0
+      '@amsterdam/design-system-css':
+        specifier: ^0.15.0
+        version: 0.15.0(@amsterdam/design-system-assets@0.3.0)(@amsterdam/design-system-tokens@0.15.0)
+      '@amsterdam/design-system-tokens':
+        specifier: ^0.15.0
+        version: 0.15.0
     devDependencies:
       '@eslint/compat':
         specifier: ^1.2.5
@@ -62,6 +72,18 @@ packages:
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
+
+  '@amsterdam/design-system-assets@0.3.0':
+    resolution: {integrity: sha512-1r7vsZ7ZjeTLIDZtxLZA97Y5EXkiRyIewWvdocGHU/qNXSKvhUqa4Q0zTMwbbojrQ/rP8Qdi08EyVT5If3X/WA==}
+
+  '@amsterdam/design-system-css@0.15.0':
+    resolution: {integrity: sha512-gKIDYvi5nFYcWcj7MDxXxlNZ6S05a5+PxpBaJgG3AGdNjkwwG3ucu8moPb8pvMksPfQLTnIdge6BIFjGEO5guA==}
+    peerDependencies:
+      '@amsterdam/design-system-assets': 0.3.0
+      '@amsterdam/design-system-tokens': 0.15.0
+
+  '@amsterdam/design-system-tokens@0.15.0':
+    resolution: {integrity: sha512-nDfrEeQx/x+0fT6hEy8t67vJZ5EfVge3d+KyP4v5IzPE+Cm80frgvC/0ghtNygkcwKR/zgRXYRoAWB43xWkNcA==}
 
   '@esbuild/aix-ppc64@0.25.2':
     resolution: {integrity: sha512-wCIboOL2yXZym2cgm6mlA742s9QeJ8DjGVaL39dLN4rRwrOgOyYSnOaFPhKZGLb2ngj4EyfAFjsNJwPXZvseag==}
@@ -1141,6 +1163,15 @@ snapshots:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
+
+  '@amsterdam/design-system-assets@0.3.0': {}
+
+  '@amsterdam/design-system-css@0.15.0(@amsterdam/design-system-assets@0.3.0)(@amsterdam/design-system-tokens@0.15.0)':
+    dependencies:
+      '@amsterdam/design-system-assets': 0.3.0
+      '@amsterdam/design-system-tokens': 0.15.0
+
+  '@amsterdam/design-system-tokens@0.15.0': {}
 
   '@esbuild/aix-ppc64@0.25.2':
     optional: true
