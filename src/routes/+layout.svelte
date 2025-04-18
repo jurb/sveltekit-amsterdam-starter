@@ -7,7 +7,7 @@
 <div class="ams-screen ams-screen--wide ams-docs-screen">
 	<div class="ams-grid">
 		<div class="ams-grid__cell ams-grid__cell--span-all">
-			<Header appTitle="BiasBuster" />
+			<Header appTitle="Test app" />
 		</div>
 		<div class="ams-grid__cell ams-grid__cell--span-all">
 			<div class="wrapper">
