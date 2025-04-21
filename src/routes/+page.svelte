@@ -4,9 +4,8 @@
 	import FormLabel from '$lib/components/FormLabel.svelte';
 	import FormTextarea from '$lib/components/FormTextarea.svelte';
 	import FormInput from '$lib/components/FormInput.svelte';
-	let formInputA = $state('');
-	let formInputB = $state('');
-	let aantalRuns = $state(10);
+	let formInputText = $state('');
+	let formInputNumbers = $state(10);
 </script>
 
 <p class="ams-paragraph--large">
@@ -16,50 +15,26 @@
 </p>
 
 <p>
-	<strong>formInputA</strong>: {formInputA}
+	<strong>formInputText</strong>: {formInputText}
 </p>
 <p>
-	<strong>formInputB</strong>: {formInputB}
+	<strong>formInputNumbers</strong>: {formInputNumbers}
 </p>
-<p>
-	<strong>aantalRuns</strong>: {aantalRuns}
-</p>
-
 
 <p><a href="./test"><Button>link test</Button></a></p>
 <p><Button onclick={() => console.log('haai')}>log on click</Button></p>
 
-<div class="form-columns-wrapper">
-	<div class="form-column">
-		<FormField>
-			<FormLabel>
-				<h3 style="margin-block-end: 0">Variant A</h3>
-				<p class="ams-paragraph"><strong>Zuidoost</strong></p>
-			</FormLabel>
-			<FormTextarea bind:value={formInputA}></FormTextarea>
-		</FormField>
-	</div>
-	<div class="form-column">
-		<FormField>
-			<FormLabel>
-				<h3 style="margin-block-end: 0">Variant B</h3>
-				<p class="ams-paragraph"><strong>Zuid</strong></p>
-			</FormLabel>
-			<FormTextarea bind:value={formInputB}></FormTextarea>
-		</FormField>
-	</div>
-</div>
-<p>Aantal runs: <FormInput bind:value={aantalRuns} type="number" /> </p>
-<p><Button onclick={() => console.log('haai')}>Vergelijking runnen</Button></p>
+<FormField>
+	<FormLabel>
+		<h3 style="margin-block-end: 0">Form</h3>
+		<p class="ams-paragraph">Explanatory text</p>
+		<!-- TODO: there are components / styles for form text elements, not implemented here -->
+	</FormLabel>
+	<FormTextarea bind:value={formInputText}></FormTextarea>
+</FormField>
+
+<p>Here is a number: <FormInput bind:value={formInputNumbers} type="number" /></p>
+<p><Button onclick={() => console.log('send demo')}>Versturen</Button></p>
 
 <style>
-	.form-columns-wrapper {
-		display: flex;
-		gap: 1rem;
-		width: 100%;
-	}
-
-	.form-column {
-		flex: 1;
-	}
 </style>
