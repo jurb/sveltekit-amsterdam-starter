@@ -13,3 +13,11 @@
 		</div>
 	</div>
 </div>
+
+<style>
+	.grid-wrapper {
+		background-color: #f5f5f5;
+		min-height: 100vh; /* Make it at least full viewport height */
+		width: 100%;
+	}
+</style>
