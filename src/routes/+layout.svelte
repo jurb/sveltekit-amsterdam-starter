@@ -19,7 +19,7 @@
 
 <style>
 	.wrapper {
-		padding-inline: var(--ams-header-padding-inline);
-		/* TODO: haha we use the same padding var as used in the header to pad the app wrapper, NOT the way */
+		padding-inline: var(--ams-grid-padding-inline);
+		/* TODO made my own grid wrapper using the spacing var from the filesystem, must be a neater way to fix */
 	}
 </style>
