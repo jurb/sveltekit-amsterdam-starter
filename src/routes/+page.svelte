@@ -1,4 +1,7 @@
 
+	<script>
+		import Button from "$lib/components/Button.svelte";
+	</script>
 	
 	<p class="ams-paragraph--large">
 		Niet meer naar het Stadsloket, maar thuis of op het werk uw nieuwe paspoort ontvangen. In juni
@@ -12,3 +15,5 @@
 	</p>
 
 
+<p><a href="./test"><Button>link test</Button></a></p>
+<p><Button onclick={() => console.log('haai')}>log on click</Button></p>
