@@ -4,22 +4,12 @@
 	let { children } = $props();
 </script>
 
-<div class="ams-screen ams-screen--wide ams-docs-screen">
+<Header appTitle="Test app" />
+
+<div class="grid-wrapper ams-screen ams-screen--wide">
 	<div class="ams-grid">
 		<div class="ams-grid__cell ams-grid__cell--span-all">
-			<Header appTitle="Test app" />
-		</div>
-		<div class="ams-grid__cell ams-grid__cell--span-all">
-			<div class="wrapper">
-				{@render children()}
-			</div>
+			{@render children()}
 		</div>
 	</div>
 </div>
-
-<style>
-	.wrapper {
-		padding-inline: var(--ams-grid-padding-inline);
-		/* TODO made my own grid wrapper using the spacing var from the filesystem, must be a neater way to fix */
-	}
-</style>
