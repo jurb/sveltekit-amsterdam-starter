@@ -4,7 +4,7 @@
 @import '@amsterdam/design-system-tokens/dist/compact.css';
 /* TODO: compact styles do not seem to take effect for e.g. the typography: font sizes are still responsive while they should be constant */
 
-body {
+body, textarea {
     margin: 0;
     padding: 0;
     font-family: 'Amsterdam Sans', Arial, Helvetica, sans-serif;
